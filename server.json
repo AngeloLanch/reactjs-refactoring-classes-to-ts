@@ -23,6 +23,14 @@
       "price": "25.90",
       "available": true,
       "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food3.png"
+    },
+    {
+      "image": "https://i.pinimg.com/originals/a5/d1/af/a5d1afc085c98f37b327001297c8870f.jpg",
+      "name": "lasanha",
+      "price": "5,00",
+      "description": "lasanha top",
+      "available": true,
+      "id": 4
     }
   ]
 }
