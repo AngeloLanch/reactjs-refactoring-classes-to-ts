@@ -22,7 +22,7 @@ interface ModalEditFoodProps {
 }
 
 function ModalEditFood({setIsOpen, handleUpdateFood, isOpen, editingFood}: ModalEditFoodProps) {
-  const formRef = useRef()
+  const formRef = useRef(null)
 
   function handleSubmit(food: FoodProps) {
 

@@ -16,12 +16,11 @@ interface FoodProps {
 interface FoodsPropsReceived {
   key: number;
   food: FoodProps
-  handleDelete: () => void;
+  handleDelete:(id: number) => void;
   handleEditFood: (food: FoodProps) => void;
 }
 function Food(props: FoodsPropsReceived) {
   const [isAvailable, setIsAvailable] = useState<boolean>(props.food.available)
-  console.log(props.food.available)
   
   function toggleAvailable() {
     api.put(`/foods/${props.food.id}`, {
@@ -62,7 +61,7 @@ function Food(props: FoodsPropsReceived) {
           <button
             type="button"
             className="icon"
-            onClick={() => {}}
+            onClick={() => props.handleDelete(props.food.id)}
             data-testid={`remove-food-${props.food.id}`}
           >
             <FiTrash size={20} />
